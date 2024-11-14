@@ -1,0 +1,20 @@
+{
+    "image": "golang:1.23.3",
+    "runArgs": [
+      "--privileged"
+    ],
+    "overrideCommand": false,
+  
+    "customizations": {
+      "vscode": {
+          "extensions": [
+            "golang.go",
+            "GitLab.gitlab-workflow",
+            "mhutchie.git-graph",
+            "redhat.vscode-yaml",
+            "streetsidesoftware.code-spell-checker"
+          ]
+      }
+    }
+  }
+  
