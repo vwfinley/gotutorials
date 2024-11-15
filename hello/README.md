@@ -1,3 +1,8 @@
+
+# General
+Tutorial code from: https://go.dev/doc/tutorial/getting-started
+
+
 # Running the tutorial
 At commandline:
 ```
