@@ -9,13 +9,18 @@ tasks:
   build:
     deps: [clean]
     sources:
-      - *.mod
-      - *.go
+      - ./*.mod
+      - ./*.go
     generates:
       - greetings
     cmds:
       - go version
       - go build -v
+
+  test:
+    deps: [build]
+    cmds:
+      - go test -v
 
   run:
     deps: [build]
