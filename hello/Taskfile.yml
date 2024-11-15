@@ -21,3 +21,8 @@ tasks:
     deps: [build]
     cmds:
       - go run .
+    
+  install:
+    deps: [build]
+    cmds:
+      - go install
