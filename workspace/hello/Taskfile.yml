@@ -1,0 +1,28 @@
+# https://taskfile.dev/usage/
+version: '3' # the version of taskfile being used
+
+tasks:
+  clean:
+    cmds:
+      - rm -f hello
+
+  build:
+    deps: [clean]
+    sources:
+      - hello.mod
+      - hello.go
+    generates:
+      - hello
+    cmds:
+      - go version
+      - go build -v
+
+  run:
+    deps: [build]
+    cmds:
+      - go run .
+    
+  install:
+    deps: [build]
+    cmds:
+      - go install
