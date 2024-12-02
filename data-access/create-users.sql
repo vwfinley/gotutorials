@@ -1,0 +1,1 @@
+create user 'user1' identified by 'password1';
