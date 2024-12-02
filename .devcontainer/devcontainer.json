@@ -1,12 +1,14 @@
 {
-    "image": "golang:1.23.3",
+    "build":{
+      "dockerfile": "Dockerfile"
+    },
 
     "runArgs": [
       "--privileged"
     ],
     "overrideCommand": true,
     "postCreateCommand": "go install github.com/go-task/task/v3/cmd/task@latest",
-
+    "postStartCommand": "service mariadb restart",
     "customizations": {
       "vscode": {
           "extensions": [
