@@ -17,34 +17,34 @@ func add(a, b int) int {
 
 func sub() {
 
-	var a []int  // declared, variable size
-	var b [4]int // declared fixed size
+	var a []int           // declared, variable size
+	a = []int{1, 2, 3, 4} // implicit size assignment
 
-	a = []int{1, 2, 3, 4}
-	b = [4]int{1, 2, 3, 4}
+	var b [4]int           // declared fixed size
+	b = [4]int{1, 2, 3, 4} // explicit size assignment
 
-	j := []int{1, 2, 3, 4}    // implicit declaration, implicit size
-	k := [...]int{1, 2, 3, 4} // implicit declaration, implicit size
-	l := [4]int{1, 2, 3, 4}   // implicit declaration, explicit size
+	c := []int{1, 2, 3, 4}    // implicit declaration, implicit size
+	d := [...]int{1, 2, 3, 4} // implicit declaration, implicit size
+	e := [4]int{1, 2, 3, 4}   // implicit declaration, explicit size
 
-	var m = []int{1, 2, 3, 4}    // implicit declaration, implicit size
-	var n = [...]int{1, 2, 3, 4} // implicit declaration, implicit size
-	var o = [4]int{1, 2, 3, 4}   // implicit declaration, explicit size
+	var f = []int{1, 2, 3, 4}    // implicit declaration, implicit size
+	var g = [...]int{1, 2, 3, 4} // implicit declaration, implicit size
+	var h = [4]int{1, 2, 3, 4}   // implicit declaration, explicit size
 
-	var p []int = []int{1, 2, 3, 4} // explicit declaration, implicit size
-	//	var q []int = [...]int{1, 2, 3, 4} // [...] is invalid here
-	var r [4]int = [4]int{1, 2, 3, 4} // explicit declaration, explicit size
+	var i []int = []int{1, 2, 3, 4} // explicit declaration, implicit size
+	//	var j []int = [...]int{1, 2, 3, 4} // [...] is invalid here
+	var k [4]int = [4]int{1, 2, 3, 4} // explicit declaration, explicit size
 
 	fmt.Print(a)
 	fmt.Print(b)
 
-	fmt.Print(j)
+	fmt.Print(c)
+	fmt.Print(d)
+	fmt.Print(e)
+	fmt.Print(f)
+	fmt.Print(g)
+	fmt.Print(h)
+	fmt.Print(i)
+	//	fmt.Print(j)
 	fmt.Print(k)
-	fmt.Print(l)
-	fmt.Print(m)
-	fmt.Print(n)
-	fmt.Print(o)
-	fmt.Print(p)
-	//	fmt.Print(q)
-	fmt.Print(r)
 }
